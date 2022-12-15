@@ -11,6 +11,13 @@
 		33F87BB8294B507C00A7FED8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F87BB7294B507C00A7FED8 /* ContentView.swift */; };
 		33F87BBA294B507E00A7FED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F87BB9294B507E00A7FED8 /* Assets.xcassets */; };
 		33F87BBD294B507E00A7FED8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F87BBC294B507E00A7FED8 /* Preview Assets.xcassets */; };
+		33F87BC9294B510000A7FED8 /* NotAuthorizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F87BC8294B510000A7FED8 /* NotAuthorizedView.swift */; };
+		33F87BCB294B511C00A7FED8 /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F87BCA294B511C00A7FED8 /* AccountListViewModel.swift */; };
+		33F87BCD294B512900A7FED8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F87BCC294B512900A7FED8 /* LoginViewModel.swift */; };
+		33F87BCF294B513800A7FED8 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F87BCE294B513800A7FED8 /* WebService.swift */; };
+		33F87BD1294B514500A7FED8 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F87BD0294B514500A7FED8 /* Account.swift */; };
+		33F87BD3294B515600A7FED8 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F87BD2294B515600A7FED8 /* View+Extensions.swift */; };
+		33F87BD9294B72D000A7FED8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 33F87BD8294B72D000A7FED8 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,12 @@
 		33F87BB7294B507C00A7FED8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		33F87BB9294B507E00A7FED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F87BBC294B507E00A7FED8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		33F87BC8294B510000A7FED8 /* NotAuthorizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAuthorizedView.swift; sourceTree = "<group>"; };
+		33F87BCA294B511C00A7FED8 /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		33F87BCC294B512900A7FED8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		33F87BCE294B513800A7FED8 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		33F87BD0294B514500A7FED8 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		33F87BD2294B515600A7FED8 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F87BD9294B72D000A7FED8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +65,14 @@
 		33F87BB4294B507C00A7FED8 /* jwtAuthSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				33F87BB5294B507C00A7FED8 /* jwtAuthSwiftUIApp.swift */,
-				33F87BB7294B507C00A7FED8 /* ContentView.swift */,
-				33F87BB9294B507E00A7FED8 /* Assets.xcassets */,
+				33F87BD6294B518400A7FED8 /* Main */,
+				33F87BD5294B517A00A7FED8 /* Assets */,
+				33F87BD4294B516800A7FED8 /* Views */,
+				33F87BC7294B50EC00A7FED8 /* Utils */,
+				33F87BC6294B50D700A7FED8 /* ViewModels */,
+				33F87BC5294B50D100A7FED8 /* Services */,
+				33F87BC4294B50C800A7FED8 /* Models */,
+				33F87BC3294B50BF00A7FED8 /* Extension */,
 				33F87BBB294B507E00A7FED8 /* Preview Content */,
 			);
 			path = jwtAuthSwiftUI;
@@ -65,6 +84,71 @@
 				33F87BBC294B507E00A7FED8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33F87BC3294B50BF00A7FED8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BD2294B515600A7FED8 /* View+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		33F87BC4294B50C800A7FED8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BD0294B514500A7FED8 /* Account.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33F87BC5294B50D100A7FED8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BCE294B513800A7FED8 /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		33F87BC6294B50D700A7FED8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BCA294B511C00A7FED8 /* AccountListViewModel.swift */,
+				33F87BCC294B512900A7FED8 /* LoginViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		33F87BC7294B50EC00A7FED8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BC8294B510000A7FED8 /* NotAuthorizedView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		33F87BD4294B516800A7FED8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BB7294B507C00A7FED8 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33F87BD5294B517A00A7FED8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BB9294B507E00A7FED8 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		33F87BD6294B518400A7FED8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				33F87BB5294B507C00A7FED8 /* jwtAuthSwiftUIApp.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +167,9 @@
 			dependencies = (
 			);
 			name = jwtAuthSwiftUI;
+			packageProductDependencies = (
+				33F87BD8294B72D000A7FED8 /* Alamofire */,
+			);
 			productName = jwtAuthSwiftUI;
 			productReference = 33F87BB2294B507C00A7FED8 /* jwtAuthSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +198,9 @@
 				Base,
 			);
 			mainGroup = 33F87BA9294B507C00A7FED8;
+			packageReferences = (
+				33F87BD7294B72D000A7FED8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 33F87BB3294B507C00A7FED8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +227,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F87BCF294B513800A7FED8 /* WebService.swift in Sources */,
 				33F87BB8294B507C00A7FED8 /* ContentView.swift in Sources */,
 				33F87BB6294B507C00A7FED8 /* jwtAuthSwiftUIApp.swift in Sources */,
+				33F87BCB294B511C00A7FED8 /* AccountListViewModel.swift in Sources */,
+				33F87BCD294B512900A7FED8 /* LoginViewModel.swift in Sources */,
+				33F87BC9294B510000A7FED8 /* NotAuthorizedView.swift in Sources */,
+				33F87BD3294B515600A7FED8 /* View+Extensions.swift in Sources */,
+				33F87BD1294B514500A7FED8 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +435,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33F87BD7294B72D000A7FED8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33F87BD8294B72D000A7FED8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33F87BD7294B72D000A7FED8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33F87BAA294B507C00A7FED8 /* Project object */;
 }
